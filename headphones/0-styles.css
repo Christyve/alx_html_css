@@ -1,0 +1,113 @@
+/* — Reset CSS — */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* — Variables — */
+:root {
+  --font-family: "Source Sans Pro", Arial, sans-serif;
+  --clr-primary: #FF6565;
+  --clr-bg: #f0f0f0;
+  --clr-white: #ffffff;
+  --clr-dark: #333333;
+  --max-w: 1000px;
+  --spacing: 1rem;
+}
+
+/* — Global Settings — */
+body {
+  font-family: var(--font-family);
+  background: var(--clr-bg);
+  color: var(--clr-dark);
+  line-height: 1.6;
+}
+
+/* — Hero Section — */
+.hero {
+  width: 100%;
+  background: url("images/hero-bg.jpg") center/cover no-repeat;
+  color: var(--clr-white);
+  padding: calc(var(--spacing) * 4) var(--spacing);
+}
+
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+/* — Navigation — */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: var(--spacing);
+}
+
+.nav-list a {
+  color: var(--clr-white);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-list a:hover,
+.nav-list a:active {
+  color: var(--clr-primary);
+}
+
+/* — Hero Content — */
+.hero-content {
+  text-align: center;
+  margin-top: calc(var(--spacing) * 5);
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing);
+}
+
+.hero-content p {
+  font-size: 1.125rem;
+  margin-bottom: calc(var(--spacing) * 2);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: var(--spacing) calc(var(--spacing) * 2);
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  text-decoration: none;
+  font-size: 1.125rem;
+  border-radius: 4px;
+  transition: opacity 0.3s;
+}
+
+.btn:hover,
+.btn:active {
+  opacity: 0.9;
+}
+
+/* — Mobile Styles — */
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .nav-list {
+    display: none; /* Simplified mobile nav for this first task */
+  }
+}
