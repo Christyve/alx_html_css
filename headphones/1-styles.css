@@ -1,0 +1,101 @@
+/* Reset & Variables (use same styles from 0-styles.css) */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-primary: #FF6565;
+  --clr-dark: #333;
+  --clr-bg: #f0f0f0;
+  --clr-white: #fff;
+  --clr-card-bg: #ffffff;
+  --font-main: "Source Sans Pro", Arial, sans-serif;
+  --spacing: 1rem;
+  --max-w: 1000px;
+}
+
+body {
+  font-family: var(--font-main);
+  line-height: 1.6;
+  background: var(--clr-bg);
+  color: var(--clr-dark);
+}
+
+/* Container for centered content */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: calc(var(--spacing) * 2);
+}
+
+/* Section Title */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: calc(var(--spacing) * 2);
+}
+
+/* Cards Container */
+.cards {
+  display: flex;
+  gap: var(--spacing);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Individual Card */
+.card {
+  background: var(--clr-card-bg);
+  padding: calc(var(--spacing) * 2);
+  border-radius: 8px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon Styling */
+/* Uses custom icon font — include your holberton icon font in page head */
+@font-face {
+  font-family: "HS-Icons";
+  src: url("holberton-font/HS-Icons.woff2") format("woff2"),
+       url("holberton-font/HS-Icons.woff")  format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  font-family: "HS-Icons";
+  display: block;
+  font-size: 48px;
+  color: var(--clr-primary);
+  margin-bottom: var(--spacing);
+}
+
+/* Sample icons mapped */
+/* These classes should match the icon demo page naming convention */
+.icon-speaker::before {
+  content: "\e001"; /* replace with correct code */
+}
+.icon-comfort::before {
+  content: "\e002";
+}
+.icon-battery::before {
+  content: "\e003";
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing);
+}
+
+/* Responsive layout adjustment */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
