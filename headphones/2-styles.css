@@ -1,0 +1,82 @@
+/* Reset & Variables */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-primary: #FF6565;
+  --clr-dark: #333;
+  --clr-bg: #f0f0f0;
+  --clr-white: #fff;
+  --clr-card-bg: #fff;
+  --font-main: "Source Sans Pro", Arial, sans-serif;
+  --spacing: 1rem;
+  --max-w: 1000px;
+}
+
+body {
+  font-family: var(--font-main);
+  line-height: 1.6;
+  background: var(--clr-bg);
+  color: var(--clr-dark);
+}
+
+/* Container */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: calc(var(--spacing) * 2);
+}
+
+/* Section title */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: calc(var(--spacing) * 2);
+}
+
+/* Our Results stats grid */
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: calc(var(--spacing) * 2);
+  text-align: center;
+}
+
+.stat {
+  background: var(--clr-white);
+  padding: calc(var(--spacing) * 2);
+  flex: 1 1 220px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-value {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--clr-primary);
+}
+
+.stat-label {
+  display: block;
+  margin-top: var(--spacing);
+  font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .stats {
+    flex-direction: column;
+    align-items: center;
+  }
+  .stat {
+    width: 100%;
+    max-width: 380px;
+  }
+}
