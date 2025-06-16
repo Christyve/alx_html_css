@@ -18,3 +18,10 @@ This project is built based on a professional Figma design.
 💻 Technologies Used
 HTML5
 CSS3 (No framework used)
+
+👩‍💻 Author
+Christiana Ekpiken
+Built with ❤️ as part of the ALX Software Engineering Program
+
+Feel free to connect with me on GitHub @Christyve
+
